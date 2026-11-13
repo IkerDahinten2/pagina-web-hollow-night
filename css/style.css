@@ -9,7 +9,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: #ffffff;
 
-  background-image: url("../images/fondo pagina 3.png");
+  background-image: url("../images/fondo.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -123,7 +123,7 @@ input[type="reset"] {
 }
 
 /* Imagen de personajes secundarios */
-#Personajes-secundarios img {
+#personajes-secundarios img {
   max-width: 90%;
   height: auto;
   margin: 25px auto;
@@ -216,4 +216,85 @@ input[type="reset"]:hover {
   height: auto;
   display: block;
   margin: 20px auto;
+}
+
+
+/* --- Encabezados de sección ---
+   Cada página tiene ahora un solo h1; las secciones usan h2 y las
+   herramientas h3, con la misma apariencia que antes */
+section > h2:first-child {
+  text-align: center;
+  font-size: 2em;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #9ad9ff, 0 0 15px rgba(154, 217, 255, 0.4);
+}
+
+.tool h3 {
+  font-size: 1.5em;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #9ad9ff;
+  text-shadow: 0 0 6px rgba(154, 217, 255, 0.6);
+}
+
+/* --- Accesibilidad --- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid #9ad9ff;
+  outline-offset: 2px;
+}
+
+/* --- Formulario de registro --- */
+form label {
+  display: block;
+  margin-top: 10px;
+}
+
+form .check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+form .check input {
+  width: auto;
+  margin: 0;
+}
+
+.form-message {
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.form-message--ok {
+  background-color: rgba(154, 217, 255, 0.2);
+  border-left: 4px solid #9ad9ff;
+}
+
+.form-message--error {
+  background-color: rgba(255, 99, 99, 0.2);
+  border-left: 4px solid #ff6b6b;
+}
+
+/* Las imágenes nunca se salen de su contenedor */
+img {
+  max-width: 100%;
+  height: auto;
 }
